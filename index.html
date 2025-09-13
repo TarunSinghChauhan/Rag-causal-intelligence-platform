@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Intelligence - Growth Analytics Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="container">
+                <div class="header-content">
+                    <h1 class="app-title">RAG Intelligence</h1>
+                    <p class="app-subtitle">Retrieval-Augmented Growth Analytics Platform</p>
+                </div>
+                <div class="status-indicators">
+                    <div class="status status--success">
+                        <span class="status-dot"></span>
+                        Documents: 3 indexed
+                    </div>
+                    <div class="status status--success">
+                        <span class="status-dot"></span>
+                        Experiments: 2 active
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="tab-navigation">
+            <div class="container">
+                <button class="tab-button active" data-tab="overview">Overview</button>
+                <button class="tab-button" data-tab="rag-search">RAG Search</button>
+                <button class="tab-button" data-tab="uplift-modeling">Uplift Modeling</button>
+                <button class="tab-button" data-tab="integration">Recommendations</button>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="container">
+                <!-- Overview Tab -->
+                <div class="tab-content active" id="overview">
+                    <div class="overview-grid">
+                        <div class="overview-card">
+                            <h3>RAG Search Capabilities</h3>
+                            <p>Semantic search across business documents with confidence scoring and source citations.</p>
+                            <div class="metrics">
+                                <div class="metric">
+                                    <span class="metric-value">3</span>
+                                    <span class="metric-label">Documents Indexed</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">89%</span>
+                                    <span class="metric-label">Avg Confidence</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="overview-card">
+                            <h3>Causal Analytics</h3>
+                            <p>Advanced uplift modeling and treatment effect estimation for growth optimization.</p>
+                            <div class="metrics">
+                                <div class="metric">
+                                    <span class="metric-value">2.8x</span>
+                                    <span class="metric-label">ROI Estimate</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">$125K</span>
+                                    <span class="metric-label">Revenue Lift</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="overview-card">
+                            <h3>Integration Intelligence</h3>
+                            <p>Combined insights from document analysis and causal inference for strategic decisions.</p>
+                            <div class="metrics">
+                                <div class="metric">
+                                    <span class="metric-value">95%</span>
+                                    <span class="metric-label">Confidence Level</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">15,000</span>
+                                    <span class="metric-label">Customers Analyzed</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RAG Search Tab -->
+                <div class="tab-content" id="rag-search">
+                    <div class="search-section">
+                        <div class="search-container">
+                            <h2>Document Search & Analysis</h2>
+                            <div class="search-input-container">
+                                <input type="text" id="search-input" class="search-input" placeholder="Ask questions about your business documents...">
+                                <button id="search-button" class="btn btn--primary">Search</button>
+                            </div>
+                            <div class="search-suggestions">
+                                <button class="suggestion-chip">What was the email campaign conversion rate?</button>
+                                <button class="suggestion-chip">How did customer segments respond to offers?</button>
+                                <button class="suggestion-chip">What are the retention analysis findings?</button>
+                            </div>
+                        </div>
+                        
+                        <div class="search-results" id="search-results">
+                            <!-- Results will be populated here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Uplift Modeling Tab -->
+                <div class="tab-content" id="uplift-modeling">
+                    <div class="uplift-dashboard">
+                        <h2>Causal Uplift Analysis</h2>
+                        
+                        <div class="chart-grid">
+                            <div class="chart-container">
+                                <h3>Treatment Effects by Segment</h3>
+                                <div class="chart-wrapper" style="position: relative; height: 300px;">
+                                    <canvas id="uplift-chart"></canvas>
+                                </div>
+                            </div>
+                            
+                            <div class="chart-container">
+                                <h3>Qini Curve</h3>
+                                <div class="chart-wrapper" style="position: relative; height: 300px;">
+                                    <canvas id="qini-chart"></canvas>
+                                </div>
+                            </div>
+                            
+                            <div class="chart-container">
+                                <h3>Feature Importance</h3>
+                                <div class="chart-wrapper" style="position: relative; height: 300px;">
+                                    <canvas id="feature-chart"></canvas>
+                                </div>
+                            </div>
+                            
+                            <div class="chart-container">
+                                <h3>Experiment Comparison</h3>
+                                <div class="chart-wrapper" style="position: relative; height: 300px;">
+                                    <canvas id="experiment-chart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Integration/Recommendations Tab -->
+                <div class="tab-content" id="integration">
+                    <div class="recommendations-dashboard">
+                        <h2>Intelligent Recommendations</h2>
+                        
+                        <div class="recommendations-grid">
+                            <div class="recommendation-card priority-high">
+                                <div class="recommendation-header">
+                                    <h3>High Priority Action</h3>
+                                    <span class="priority-badge">Priority 1</span>
+                                </div>
+                                <p>Target High CLV customers with personalized email campaigns. Expected uplift: 22%</p>
+                                <div class="recommendation-metrics">
+                                    <div class="rec-metric">
+                                        <span class="rec-value">$45K</span>
+                                        <span class="rec-label">Expected Revenue</span>
+                                    </div>
+                                    <div class="rec-metric">
+                                        <span class="rec-value">89%</span>
+                                        <span class="rec-label">Confidence</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="recommendation-card priority-medium">
+                                <div class="recommendation-header">
+                                    <h3>Medium Priority Action</h3>
+                                    <span class="priority-badge">Priority 2</span>
+                                </div>
+                                <p>Expand loyalty program to millennials for maximum churn reduction (25% effect)</p>
+                                <div class="recommendation-metrics">
+                                    <div class="rec-metric">
+                                        <span class="rec-value">$32K</span>
+                                        <span class="rec-label">Expected Revenue</span>
+                                    </div>
+                                    <div class="rec-metric">
+                                        <span class="rec-value">87%</span>
+                                        <span class="rec-label">Confidence</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="recommendation-card priority-low">
+                                <div class="recommendation-header">
+                                    <h3>Optimization Opportunity</h3>
+                                    <span class="priority-badge">Priority 3</span>
+                                </div>
+                                <p>Focus premium product features on early adopters with high engagement rates</p>
+                                <div class="recommendation-metrics">
+                                    <div class="rec-metric">
+                                        <span class="rec-value">$28K</span>
+                                        <span class="rec-label">Expected Revenue</span>
+                                    </div>
+                                    <div class="rec-metric">
+                                        <span class="rec-value">92%</span>
+                                        <span class="rec-label">Confidence</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="business-impact-summary">
+                            <h3>Business Impact Summary</h3>
+                            <div class="impact-metrics">
+                                <div class="impact-card">
+                                    <span class="impact-value">$125,000</span>
+                                    <span class="impact-label">Total Projected Revenue Lift</span>
+                                </div>
+                                <div class="impact-card">
+                                    <span class="impact-value">2.8x</span>
+                                    <span class="impact-label">ROI Estimate</span>
+                                </div>
+                                <div class="impact-card">
+                                    <span class="impact-value">$2.50</span>
+                                    <span class="impact-label">Cost per Treatment</span>
+                                </div>
+                                <div class="impact-card">
+                                    <span class="impact-value">15,000</span>
+                                    <span class="impact-label">Customers Affected</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Loading Overlay -->
+        <div class="loading-overlay" id="loading-overlay">
+            <div class="loading-spinner"></div>
+            <p>Processing your request...</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
